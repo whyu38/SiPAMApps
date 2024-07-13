@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".About">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/logo_about" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:text="Apa itu SIPAM?"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="10dp"
+                android:text="SIPAM merupakan aplikasi yang bekerja sama dengan Perumda Tirta Kanjuruhan dan Pemerintah Kabupaten Malang untuk dapat memenuhi kebutuhan air minum bersih dan layak digunakan oleh masyarakat dalam memenuhi kebutuhan sehari-hari khususnya di wilayah Desa Kedungrejo, Kecamatan Pakis, Kabupaten Malang."
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/createdBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="Created by:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/creatorImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/createdBy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/foto" />
+
+            <TextView
+                android:id="@+id/creatorInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creatorImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Wahyu Sukma Jayawardhana\n221-111-012\nInformatika - STIKI Malang"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/supportBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creatorInfo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:text="Support by:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/supportImage"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/supportBy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/about_support" />
+
+            <TextView
+                android:id="@+id/applicationInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/supportImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Versi Aplikasi 1.0.0"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

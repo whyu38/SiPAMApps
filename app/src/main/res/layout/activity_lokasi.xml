@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Lokasi">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_lokasi" />
+
+            <ImageView
+                android:id="@+id/locationImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="5dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/image_maps" />
+
+            <TextView
+                android:id="@+id/locationDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Kami menjangkau daerah sekitar Kedungboto, Baran, Genitri, dan Gedangsewu yang berada di wilayah Desa Kedungrejo, Kecamatan Pakis, Kabupaten Malang\n\nKantor: Dsn. Kedungboto, RT.4/RW.4, Genitri, Kedungrejo, Kabupaten Malang, Jawa Timur 65154\n\nInduk: Jl. Sultan Agung No.76A, Cokoleo, Kepanjen, Kec. Kepanjen, Kabupaten Malang, Jawa Timur 65163"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnViewOnMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locationDescription"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="LIHAT DI GOOGLE MAPS"
+                android:backgroundTint="#00ADEF" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

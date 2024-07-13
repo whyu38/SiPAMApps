@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Payment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/logo_pay" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="Pembayaran otomatis melalui QRIS"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/qrisImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subtitle"
+                android:layout_marginTop="16dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/qris" />
+
+            <TextView
+                android:id="@+id/instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qrisImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24dp"
+                android:text="Jika sudah melakukan pembayaran non-QRIS\nSilahkan konfirmasi Bukti Pembayaran dibawah"
+                android:textSize="16sp"
+                android:gravity="center" />
+
+            <Button
+                android:id="@+id/btnConfirmPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/instructions"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="KONFIRMASI PEMBAYARAN"
+                android:backgroundTint="#00ADEF" />
+
+            <Button
+                android:id="@+id/btnBacktoHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnConfirmPayment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="KE HALAMAN UTAMA"
+                android:backgroundTint="#00ADEF" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

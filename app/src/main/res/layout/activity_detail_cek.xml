@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DetailCek">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="40dp">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_pay" />
+
+    <TextView
+        android:id="@+id/tvDetailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DETAIL TAGIHAN"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvNamaPelanggan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pelanggan:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvDetailTitle"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvNomorMeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor Meter:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvNamaPelanggan"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvJumlahPenggunaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Penggunaan:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvNomorMeter"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvTanggalPembayaran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Pembayaran:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvJumlahPenggunaan"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvKelas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelas:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvTanggalPembayaran"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvDenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Denda:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvKelas"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvBiayaAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biaya Admin:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvDenda"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Total Tagihan:"
+        android:textSize="16sp"
+        android:layout_below="@id/tvBiayaAdmin"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnBayarSekarang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="BAYAR SEKARANG"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00B0FF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvTotal" />
+
+</RelativeLayout>
+    </ScrollView>
+    </RelativeLayout>
