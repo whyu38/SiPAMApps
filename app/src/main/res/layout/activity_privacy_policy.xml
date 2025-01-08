@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrivacyPolicy">
+
+    <!-- ScrollView untuk konten panjang -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo_main"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Judul Privacy Policy -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kebijakan Privasi"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Konten Privacy Policy -->
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Di SIPAMApps, kami berkomitmen untuk melindungi dan menghormati privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan menjaga informasi pribadi Anda saat Anda menggunakan aplikasi SIPAMApps. Silakan baca kebijakan ini dengan seksama untuk memahami praktik kami terkait data pribadi Anda.\n\n1. Informasi yang Kami Kumpulkan\nKami mengumpulkan berbagai jenis informasi untuk menyediakan dan meningkatkan layanan kami, termasuk:\nInformasi Pribadi: Nama, alamat email, nomor telepon, alamat, dan informasi kontak lainnya saat Anda mendaftar akun atau meminta layanan (misalnya, pemasangan baru, transaksi pembayaran, pengajuan pengaduan).\nInformasi Pembayaran: Detail transaksi, termasuk riwayat pembayaran tagihan air.\nInformasi Perangkat: Data seperti alamat IP, jenis browser, informasi perangkat, dan statistik penggunaan.\nInformasi Terkait Layanan: Status tagihan air, riwayat pembayaran, permintaan pemasangan baru, dan pengaduan yang diajukan.\n\n2. Bagaimana Kami Menggunakan Informasi Anda\nKami dapat menggunakan informasi yang kami kumpulkan untuk tujuan berikut:\nUntuk menyediakan dan memelihara layanan kami, seperti pengecekan status tagihan air, pemrosesan pembayaran, dan penanganan permintaan layanan.\nUntuk mengirimkan pemberitahuan terkait penagihan, konfirmasi pembayaran, atau pembaruan layanan.\nUntuk menangani permintaan dukungan pelanggan, pengaduan, atau masalah teknis.\nUntuk meningkatkan kinerja dan fungsionalitas aplikasi dengan menganalisis tren penggunaan dan umpan balik pengguna.\nUntuk mematuhi kewajiban hukum dan memastikan keamanan aplikasi serta penggunanya.\n\n3. Berbagi Informasi\nKami dapat membagikan informasi Anda dalam situasi berikut:\nDengan Penyedia Layanan: Kami dapat membagikan informasi dengan penyedia layanan pihak ketiga yang membantu kami menjalankan aplikasi, seperti gateway pembayaran atau penyedia layanan pelanggan.\nKepatuhan Hukum: Kami dapat mengungkapkan data Anda jika diwajibkan oleh hukum atau sebagai tanggapan atas permintaan yang sah dari otoritas publik (misalnya, pengadilan atau lembaga pemerintah).\nDengan Persetujuan Anda: Kami dapat membagikan data Anda untuk tujuan lain dengan persetujuan eksplisit Anda.\n\n4. Keamanan Data\nKami mengutamakan keamanan informasi pribadi Anda. Kami menggunakan metode enkripsi standar industri dan protokol keamanan untuk melindungi data Anda. Namun, tidak ada metode transmisi melalui internet yang 100% aman, dan kami tidak dapat menjamin keamanan absolut.\n\n5. Hak Anda terhadap Data\nSebagai pengguna, Anda memiliki hak untuk:\nAkses dan Pembaruan: Mengakses dan memperbarui informasi pribadi Anda di dalam aplikasi.\nMeminta Penghapusan: Meminta penghapusan akun dan data terkait.\nMenarik Persetujuan: Menarik persetujuan atas pemrosesan data Anda kapan saja.\n\n6. Perubahan pada Kebijakan Privasi Ini\nKami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Setiap perubahan akan diumumkan di aplikasi, dan kami akan memberi tahu Anda tentang pembaruan yang signifikan.\n\n7. Hubungi Kami\nJika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami di:\nEmail: pilarbatupenjuru13@gmail.com"
+                android:textSize="16sp"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

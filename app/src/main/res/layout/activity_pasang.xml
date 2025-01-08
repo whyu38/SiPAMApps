@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <!-- Header: SIPAM APPS Image -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_main"
+            android:contentDescription="SIPAM APPS Logo"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <!-- Title: Layanan Pasang Baru -->
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Layanan Pasang Baru"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Name Field -->
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap:"
+            android:layout_below="@id/textViewTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan Nama"
+            android:layout_below="@id/textViewName"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Location Section -->
+        <TextView
+            android:id="@+id/textViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temukan Lokasi Anda:"
+            android:layout_below="@id/editTextName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude:"
+            android:layout_below="@id/textViewLocation"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Latitude"
+            android:layout_below="@id/textViewLatitude"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude:"
+            android:layout_below="@id/editTextLatitude"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Longitude"
+            android:layout_below="@id/textViewLongitude"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <!-- Button to find address -->
+        <Button
+            android:id="@+id/buttonFindAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEMUKAN ALAMAT"
+            android:layout_below="@id/editTextLongitude"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Address TextView -->
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Anda:"
+            android:layout_below="@id/buttonFindAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Radio Button Options for Class -->
+        <TextView
+            android:id="@+id/textViewClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Kelas:"
+            android:layout_below="@id/textViewAddress"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewClass"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp">
+
+            <RadioButton
+                android:id="@+id/radioButtonI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="II"/>
+
+            <RadioButton
+                android:id="@+id/radioButtonIII"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="III"/>
+        </RadioGroup>
+
+        <!-- Button to Place Order -->
+        <Button
+            android:id="@+id/buttonPlaceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PESAN SEKARANG"
+            android:layout_below="@id/radioGroupClass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

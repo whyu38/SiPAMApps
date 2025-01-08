@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
 
@@ -21,18 +22,14 @@ class Home : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE)
 
-        if (!sharedPreferences.getBoolean(IS_LOGGED_IN, false)) {
-            goToLoginActivity()
-        }
+        // Pengecekan login di onCreate
+        checkLoginStatus()
 
-        val btnInfo: ImageButton = findViewById(R.id.info_button)
         val btnCheckBill: ImageButton = findViewById(R.id.btn_check_bill)
-        val btnHistory: ImageButton = findViewById(R.id.btn_history)
         val btnNewConnection: ImageButton = findViewById(R.id.btn_new_connection)
         val btnComplaint: ImageButton = findViewById(R.id.btn_complaint)
-        val btnOffice: ImageButton = findViewById(R.id.btn_office)
-        val btnLogout: ImageButton = findViewById(R.id.btn_logout)
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation)
 
         // List gambar slider
         val images = listOf(
@@ -41,48 +38,60 @@ class Home : AppCompatActivity() {
             R.drawable.s3
         )
 
-        // adapter Slider
+        // Adapter slider
         val adapter = ImageSliderAdapter(images)
         viewPager.adapter = adapter
-
-        btnInfo.setOnClickListener {
-            startActivity(Intent(this, About::class.java))
-        }
 
         btnCheckBill.setOnClickListener {
             startActivity(Intent(this, Cek::class.java))
         }
 
-        btnHistory.setOnClickListener {
-            startActivity(Intent(this, Riwayat::class.java))
-        }
-
         btnNewConnection.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            // URL untuk menghubungi customer service
-            intent.data = Uri.parse("https://api.whatsapp.com/send/?phone=6289636860431&text&type=phone_number&app_absent=0")
-            startActivity(intent)
+                startActivity(Intent(this, Pasang::class.java))
         }
 
         btnComplaint.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
-            // URL untuk menghubungi customer service
             intent.data = Uri.parse("https://api.whatsapp.com/send/?phone=6289636860431&text&type=phone_number&app_absent=0")
             startActivity(intent)
         }
 
-        btnOffice.setOnClickListener {
-            startActivity(Intent(this, Lokasi::class.java))
+        // Listener untuk BottomNavigationView
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    startActivity(Intent(this, Home::class.java))
+                    true
+                }
+                R.id.nav_activity -> {
+                    startActivity(Intent(this, Riwayat::class.java))
+                    true
+                }
+                R.id.nav_account -> {
+                    startActivity(Intent(this, Akun::class.java))
+                    true
+                }
+                else -> false
+            }
         }
+    }
 
-        btnLogout.setOnClickListener {
-            logout()
+    override fun onResume() {
+        super.onResume()
+        // Pengecekan login setiap kali layar diaktifkan
+        checkLoginStatus()
+    }
+
+    private fun checkLoginStatus() {
+        if (!sharedPreferences.getBoolean(IS_LOGGED_IN, false)) {
+            goToLoginActivity()
         }
     }
 
     private fun logout() {
         val databaseHelper = DatabaseHelper(this)
-        databaseHelper.clearAllRiwayat() // Menghapus semua riwayat pembayaran dari database
+        databaseHelper.clearAllRiwayat()
 
         val editor = sharedPreferences.edit()
         editor.remove(IS_LOGGED_IN)
@@ -98,11 +107,9 @@ class Home : AppCompatActivity() {
         finish()
     }
 
-    // Metode untuk membuka tautan artikel
     fun openArticleLink(view: View) {
-        var url = "" // URL sesuai dengan artikel yang diklik
+        var url = ""
 
-        // Menentukan URL berdasarkan id view yang diklik
         when (view.id) {
             R.id.infoItem1 -> url = "https://radarmalang.jawapos.com/berita-terbaru/811454151/lagi-perumda-tirta-kanjuruhan-sabet-innovative-government-award"
             R.id.infoItem2 -> url = "https://pdaminfo.pdampintar.id/blog/lainnya/ini-jumlah-pemakaian-normal-air-rumah-tangga#google_vignette"
@@ -111,7 +118,6 @@ class Home : AppCompatActivity() {
             R.id.infoItem5 -> url = "https://www.perumdamtkr.com/read/65faca8d-3e80-4045-9d35-4297a747c35f/berita/pertahankan-prestasi-pdam-kabupaten-tangerang-jadi"
         }
 
-        // Buka tautan artikel di browser
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivity(intent)
     }

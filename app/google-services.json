@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "567512329964",
+    "project_id": "sipamapps",
+    "storage_bucket": "sipamapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:567512329964:android:d882c9dade3601a7527fc9",
+        "android_client_info": {
+          "package_name": "com.wahyu.sipamapps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChPba8nSmMOTFlAOwo2YIEWRNgV2YHsQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

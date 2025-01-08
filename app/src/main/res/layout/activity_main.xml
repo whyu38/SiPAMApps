@@ -1,30 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="40dp"
-    android:background="@drawable/auth_bg"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/logo"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logo_main" />
+
+    <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
-        android:src="@drawable/logo_main" />
+        android:layout_marginBottom="30dp" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
+        android:layout_below="@id/tvLogin"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColor="#FFFFFF"
         android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/etPassword"
@@ -35,16 +44,30 @@
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:padding="12dp"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="32dp" />
 
+    <!-- Button Login -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_below="@id/etPassword"
+        android:layout_marginBottom="16dp"
         android:text="Login"
         android:backgroundTint="#00ADEF"
+        android:textColor="#FFFFFF" />
+
+    <!-- Button Biometric -->
+    <Button
+        android:id="@+id/btnBiometricLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/btnLogin"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="8dp"
+        android:backgroundTint="#00ADEF"
+        android:text="Biometric Login"
         android:textColor="#FFFFFF"
-        android:padding="12dp"/>
+        android:padding="12dp" />
 
 </RelativeLayout>

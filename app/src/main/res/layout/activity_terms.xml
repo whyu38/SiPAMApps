@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Terms">
+
+    <!-- ScrollView untuk mendukung konten panjang -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp">
+
+            <!-- Logo -->
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo_main" />
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:layout_marginTop="16dp"
+                android:text="Syarat dan Ketentuan"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="@color/black" />
+
+            <!-- Konten -->
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="12dp"
+                android:text="Dengan menggunakan aplikasi SIPAMApps, Anda setuju untuk mematuhi dan terikat oleh Syarat dan Ketentuan ini. Harap baca dengan cermat sebelum menggunakan aplikasi ini. Jika Anda tidak setuju dengan syarat dan ketentuan ini, Anda tidak diperkenankan menggunakan aplikasi SIPAMApps.\n\n1. Layanan yang Disediakan\nSIPAMApps adalah aplikasi yang bertujuan untuk memberikan layanan berikut kepada pengguna:\n\n• Pengecekan Tagihan: Pengguna dapat memeriksa tagihan air secara langsung melalui aplikasi.\n• Transaksi Pembayaran: Pengguna dapat melakukan transaksi pembayaran tagihan air melalui metode pembayaran yang tersedia di aplikasi.\n• Layanan Pasang Baru: Pengguna dapat mengajukan permintaan pemasangan instalasi air baru.\n• Pengajuan Pengaduan: Pengguna dapat mengirimkan pengaduan terkait masalah atau keluhan tentang layanan air.\n\n2. Akun Pengguna\nUntuk menggunakan sebagian besar layanan yang tersedia di SIPAMApps, pengguna diwajibkan untuk membuat akun. Dengan membuat akun, pengguna setuju untuk:\n\n• Memberikan informasi yang akurat, terbaru, dan lengkap.\n• Bertanggung jawab atas kerahasiaan akun dan kata sandi.\n• Segera memberitahukan kepada kami jika ada akses tidak sah atau pelanggaran keamanan yang diketahui.\n\n3. Penggunaan Layanan\nPengguna setuju untuk menggunakan aplikasi SIPAMApps hanya untuk tujuan yang sah dan sesuai dengan hukum yang berlaku.\n\n4. Pembayaran dan Transaksi\nPengguna yang melakukan pembayaran tagihan melalui SIPAMApps setuju untuk memastikan bahwa semua informasi pembayaran yang diberikan adalah benar, lengkap, dan sah.\n\n5. Pengajuan Layanan Pasang Baru dan Pengaduan\nPengguna yang mengajukan pemasangan baru atau pengaduan setuju untuk memberikan informasi yang benar dan akurat mengenai permintaan atau pengaduan.\n\n6. Perubahan pada Layanan\nSIPAMApps berhak untuk memodifikasi, menangguhkan, atau menghentikan sebagian atau seluruh layanan tanpa pemberitahuan terlebih dahulu.\n\n7. Batasan Tanggung Jawab\nSIPAMApps tidak bertanggung jawab atas kerusakan atau kerugian yang timbul dari penggunaan aplikasi ini.\n\n8. Kepatuhan terhadap Hukum\nPengguna setuju untuk mematuhi semua hukum dan peraturan yang berlaku dalam penggunaan SIPAMApps.\n\n9. Perubahan pada Syarat dan Ketentuan\nKami berhak untuk memperbarui atau mengubah Syarat dan Ketentuan ini dari waktu ke waktu.\n\n10. Penutupan Akun\nSIPAMApps berhak menangguhkan atau menutup akun pengguna jika ditemukan pelanggaran terhadap syarat dan ketentuan ini.\n\n11. Hubungi Kami\nJika Anda memiliki pertanyaan atau masalah terkait Syarat dan Ketentuan ini, silakan hubungi kami di:\nEmail: pilarbatupenjuru13@gmail.com"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
